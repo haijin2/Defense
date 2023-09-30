@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce77606wnym2p"]
+
+[ext_resource type="PackedScene" uid="uid://d2udt2oqijwea" path="res://Tiles/Mobs/Enemy.tscn" id="1_bdiqb"]
+
+[sub_resource type="Curve2D" id="Curve2D_pjpv6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 192, 128, 0, 0, 0, 0, 192, 512, 0, 0, 0, 0, 320, 512, 0, 0, 0, 0, 448, 512, 0, 0, 0, 0, 448, 128, 0, 0, 0, 0, 704, 128, 0, 0, 0, 0, 704, 512, 0, 0, 0, 0, 832, 512, 0, 0, 0, 0, 960, 512, 0, 0, 0, 0, 960, 128, 0, 0, 0, 0, 1088, 128)
+}
+point_count = 12
+
+[node name="Path2D" type="Path2D"]
+curve = SubResource("Curve2D_pjpv6")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(0, 128)
+scale = Vector2(-16.326, 0.8)
+loop = false
+
+[node name="Enemy" parent="PathFollow2D" instance=ExtResource("1_bdiqb")]
+position = Vector2(0.000239552, 1.52588e-05)
+rotation = 3.14159
+scale = Vector2(0.061252, -1.25)

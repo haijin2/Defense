@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2udt2oqijwea"]
+
+[ext_resource type="Script" path="res://Tiles/Mobs/Enemy.gd" id="1_ptp3o"]
+[ext_resource type="Texture2D" uid="uid://b2ol3npa8gnbk" path="res://Tiles/Mobs/enemy.jpg" id="2_35wc5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8g6ok"]
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_ptp3o")
+
+[node name="Enemy" type="Sprite2D" parent="."]
+scale = Vector2(0.0595603, 0.0657407)
+texture = ExtResource("2_35wc5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8g6ok")
+one_way_collision_margin = 0.0
